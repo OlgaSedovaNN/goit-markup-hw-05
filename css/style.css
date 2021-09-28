@@ -495,6 +495,9 @@ ul {
   border-radius: 4px;
   background-color: inherit;
   padding-left: 20px;
+  padding-top: 0;
+  padding-right: 0;
+  padding-bottom: 0;
   font-size: 16px;
   color: rgba(255, 255, 255, 0.6);
 }
@@ -513,6 +516,7 @@ ul {
   display: inline-block;
   justify-content: center;
   align-items: center;
+  transform: translateY(2px);
 }
 .subscribe-icon {
   fill: var(--color-for-colored-backgraund);
@@ -663,4 +667,117 @@ ul {
 }
 .btn-close .icon {
   fill: #000000;
+}
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+.modal-name {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.15;
+  color: var(--heading-text-color);
+  margin-bottom: 12px;
+}
+.input-container {
+  position: relative;
+  width: 448px;
+}
+.input-container:focus-within > .input-modal {
+  border: 1px solid var(--accent-color);
+  -webkit-appearance: none;
+  outline: inherit;
+}
+.input-container:focus-within > .icon-modal {
+  fill: var(--accent-color);
+  outline: inherit;
+}
+.label-modal {
+  color: var(--primary-text-color);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.01em;
+  margin-bottom: 4px;
+}
+.input-modal {
+  width: 100%;
+  height: 40px;
+  padding-left: 40px;
+  margin-bottom: 10px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-modal {
+  position: absolute;
+  top: 11px;
+  left: 12px;
+  fill: #212121;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.feedback {
+  min-height: 120px;
+  padding-left: 16px;
+}
+.feedback::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.01em;
+  margin-bottom: 20px;
+}
+.agreement-line {
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  padding-left: 14px;
+}
+.agreement-checkbox {
+  width: 16px;
+  height: 15px;
+  border: 1.5px solid #212121;
+  border-radius: 2px;
+}
+.agreement-checkbox:checked + .agreement-icon {
+  opacity: 1;
+  position: absolute;
+  pointer-events: none;
+}
+
+.agreement-icon {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0;
+}
+.agreement-label {
+  margin-left: 7px;
+  margin-right: 7px;
+}
+.agreement-link {
+  color: var(--accent-color);
+  text-decoration: underline var(--accent-color);
+}
+.form-btn {
+  display: block;
+  width: 200px;
+  height: 50px;
+  margin-top: 30px;
+  align-self: center;
+  background-color: var(--accent-color);
+  color: var(--color-for-colored-backgraund);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0 solid var(--accent-color);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.form-btn:hover,
+.form-btn:focus {
+  background-color: #188ce8;
 }
