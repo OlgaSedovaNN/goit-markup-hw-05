@@ -721,7 +721,7 @@ ul {
 
 .icon-modal {
   position: absolute;
-  top: 25px;
+  top: 29px;
   left: 12px;
   fill: #212121;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
